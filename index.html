@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FORM-8 Generator</title>
+  <style>
+    body { font-family: Arial; max-width: 800px; margin: auto; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    textarea { height: 80px; width: 100%; }
+  </style>
+</head>
+<body>
+
+<h2>FORM-8 - Village Boundary Inspection Report</h2>
+
+<form id="form8">
+  <label>Village 1: <input type="text" name="village1"></label>
+  <label>Village 2: <input type="text" name="village2"></label>
+  <label>Mandal: <input type="text" name="mandal"></label>
+  <label>District: <input type="text" name="district"></label>
+  <label>Date: <input type="date" name="date"></label>
+  <label>Inspector Name: <input type="text" name="inspector"></label>
+  <label>GNSS Rover Code (Surveyor): <input type="text" name="gnss_surveyor"></label>
+  <label>GNSS Rover Code (Officer): <input type="text" name="gnss_officer"></label>
+  <label>Tally Coordinates:
+    <select name="tally">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label>
+  <label>Remarks (if not tallied): <textarea name="remarks"></textarea></label>
+  <label>Overlapping/Gaps Observed:
+    <select name="overlaps">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label>
+  <label>Quality of Work by Surveyor: <input type="text" name="quality"></label>
+  <label>Reasons for Deviation: <input type="text" name="deviation_reasons"></label>
+  <label>Outturn as per Norms:
+    <select name="outturn_norms">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label>
+  <label>Reasons for Less/High Outturn: <input type="text" name="outturn_reasons"></label>
+  <label>Corrections Carried Out:
+    <select name="corrections_done">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label>
+  <label>Details of Corrections Attended: <input type="text" name="correction_details"></label>
+  <label>Whether corrections are carried out as per Inspection Report <input type="text" name="as_per_inspection_report"></label>
+  <label>Total No. of Survey Stones Measured <input type="text" name="Total No. of Survey Stones Measured"></label>
+  <label>Details of Survey Marks <input type="text" name="Details of Survey Marks"></label>
+  <label>No. of Stones inspected <input type="text" name="No. of Stones inspected"></label>
+  <label>Details of Survey Marks <input type="text" name="Details of Survey Marks"></label>
+
+  <label>Inspected By: <input type="text" name="inspected_by"></label>
+  <label>Signature: <input type="text" name="signature"></label>
+  <label>Name: <input type="text" name="name"></label>
+  <label>Designation: <input type="text" name="designation"></label>
+
+  <button type="submit">Generate FORM-8</button>
+</form>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> 
+<script src="https://unpkg.com/pizzip@3.1.5/build/pizzip.min.js"></script> 
+<script src="https://unpkg.com/docxtemplater@3.36.1/build/docxtemplater.js"></script> 
+
+<script src="generate.js"></script>
+
+</body>
+</html>
